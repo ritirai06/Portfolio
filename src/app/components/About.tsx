@@ -30,7 +30,7 @@ export function About() {
             viewport={{ once: true }}
           >
             <div className="relative">
-              <div className="w-80 h-80 mx-auto rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border-2 border-blue-400/30 p-4 flex items-center justify-center overflow-hidden">
+              <div className="w-56 h-56 sm:w-72 sm:h-72 md:w-80 md:h-80 mx-auto rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border-2 border-blue-400/30 p-4 flex items-center justify-center overflow-hidden">
                 <ImageWithFallback 
                   src={profileImage} 
                   alt="Riti Rai" 
@@ -68,18 +68,18 @@ export function About() {
               and integrated cloud-based deployment solutions with AWS, FastAPI, Flask, and Streamlit.
             </p>
 
-            <div className="flex items-center space-x-6 text-gray-400">
+            <div className="flex flex-wrap items-center gap-3 sm:gap-6 text-gray-400">
               <div className="flex items-center space-x-2">
                 <Code className="text-blue-400" size={20} />
-                <span>Fluent in algorithms</span>
+                <span className="text-sm sm:text-base">Fluent in algorithms</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Coffee className="text-purple-400" size={20} />
-                <span>Powered by AI Services</span>
+                <span className="text-sm sm:text-base">Powered by AI Services</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Heart className="text-pink-400" size={20} />
-                <span>Passionate about AI</span>
+                <span className="text-sm sm:text-base">Passionate about AI</span>
               </div>
             </div>
 

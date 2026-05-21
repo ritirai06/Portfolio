@@ -167,7 +167,7 @@ export function Contact() {
                     <div className={`p-2 rounded-full bg-gradient-to-r ${social.color} bg-opacity-20`}>
                       <social.icon className="w-5 h-5 text-white" />
                     </div>
-                    <span className="text-gray-300 group-hover:text-white transition-colors duration-300">
+                    <span className="text-gray-300 group-hover:text-white transition-colors duration-300 text-sm sm:text-base break-all">
                       {social.label}
                     </span>
                   </motion.a>

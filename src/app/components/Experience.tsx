@@ -41,8 +41,8 @@ export function Experience() {
         </motion.div>
 
         <div className="relative">
-          {/* Timeline line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-blue-400 via-purple-400 to-pink-400 rounded-full" />
+          {/* Timeline line - hidden on mobile, shown on md+ */}
+          <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-blue-400 via-purple-400 to-pink-400 rounded-full" />
 
           {experiences.map((exp, index) => (
             <motion.div
@@ -52,22 +52,22 @@ export function Experience() {
               transition={{ duration: 0.8, delay: index * 0.3 }}
               viewport={{ once: true }}
               className={`relative flex items-center mb-16 ${
-                index % 2 === 0 ? 'justify-start' : 'justify-end'
+                index % 2 === 0 ? 'md:justify-start justify-center' : 'md:justify-end justify-center'
               }`}
             >
-              {/* Timeline node */}
+              {/* Timeline node - only on md+ */}
               <motion.div
                 initial={{ scale: 0 }}
                 whileInView={{ scale: 1 }}
                 transition={{ delay: index * 0.3 + 0.5, duration: 0.5 }}
                 viewport={{ once: true }}
-                className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-blue-400 rounded-full border-4 border-gray-900 z-10"
+                className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-blue-400 rounded-full border-4 border-gray-900 z-10"
               />
 
               {/* Content card */}
               <motion.div
-                whileHover={{ scale: 1.05 }}
-                className={`w-5/12 ${index % 2 === 0 ? 'mr-auto' : 'ml-auto'}`}
+                whileHover={{ scale: 1.02 }}
+                className={`w-full md:w-5/12 ${index % 2 === 0 ? 'md:mr-auto' : 'md:ml-auto'}`}
               >
                 <div className="bg-gray-900/80 backdrop-blur-sm border border-gray-700/50 rounded-lg p-6 hover:border-blue-400/50 transition-all duration-300">
                   <div className="flex items-center mb-4">

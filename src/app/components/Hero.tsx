@@ -12,7 +12,7 @@ export function Hero() {
           transition={{ duration: 0.8 }}
           className="mb-8"
         >
-          <h1 className="text-6xl md:text-8xl font-bold mb-4">
+          <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold mb-4">
             {"RITI RAI".split("").map((letter, index) => (
               <motion.span
                 key={index}
@@ -42,7 +42,7 @@ export function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.8 }}
-            className="text-3xl md:text-5xl font-bold text-white mb-6"
+            className="text-2xl sm:text-3xl md:text-5xl font-bold text-white mb-6"
           >
             AI/ML Engineer
           </motion.div>
@@ -52,7 +52,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8, duration: 0.8 }}
-          className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto"
+          className="text-base sm:text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto px-4"
         >
           Building Intelligent Solutions with AI & Machine Learning
         </motion.p>
@@ -61,7 +61,7 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.2, duration: 0.8 }}
-          className="flex justify-center space-x-8 mb-12"
+          className="flex justify-center space-x-4 sm:space-x-8 mb-12"
         >
           {[Brain, Cpu, Zap].map((Icon, index) => (
             <motion.div
@@ -74,9 +74,9 @@ export function Hero() {
                 rotate: { duration: 10, repeat: Infinity, ease: "linear" },
                 scale: { duration: 2, repeat: Infinity, delay: index * 0.3 }
               }}
-              className="p-4 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-400/30"
+              className="p-3 sm:p-4 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-400/30"
             >
-              <Icon size={40} className="text-blue-400" />
+              <Icon size={28} className="text-blue-400 sm:w-10 sm:h-10" />
             </motion.div>
           ))}
         </motion.div>
@@ -87,8 +87,8 @@ export function Hero() {
           transition={{ delay: 1.5, duration: 0.8 }}
           className="space-y-4"
         >
-          <div className="text-lg text-gray-400">AI Developer | Deep Learning | NLP | Computer Vision</div>
-          <div className="text-blue-400">Generative AI • LangChain • LangGraph • AWS • RAG</div>
+          <div className="text-sm sm:text-lg text-gray-400 px-4">AI Developer | Deep Learning | NLP | Computer Vision</div>
+          <div className="text-sm sm:text-base text-blue-400 px-4">Generative AI • LangChain • LangGraph • AWS • RAG</div>
         </motion.div>
       </div>
     </section>
